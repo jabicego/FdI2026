@@ -1,0 +1,96 @@
+import csv                                                             
+import os
+import math          
+
+def dimensionar_zapata(carga_columna, punto_muestreo, profundidad_deseada, forma="cuadrada", relacion_lados=1.0):
+    archivo_csv = "ensayos_suelo.csv"                   
+    print(os.path.exists(archivo_csv))                                     
+    data = open(archivo_csv, mode="r", encoding="utf-8") 
+    data = open(archivo_csv, mode="r", encoding="utf-8")      
+
+    filas = []                                                             
+    with data as archivo:                                                  
+        lector = csv.reader(archivo)                                       
+        encabezados = next(lector)  # Leer la primera fila como encabezados
+                                                          
+        for fila in lector:                                                
+            filas.append(fila)    
+
+
+    if carga_columna <= 0:
+        print("La carga de la columna debe ser mayor que cero.")
+    if forma not in {"cuadrada", "rectangular"}:
+        print("La forma debe ser 'cuadrada' o 'rectangular'.")
+
+    for fila in filas:
+        if fila[0] == punto_muestreo:
+            resistencia_kpa = float(fila[5])
+            tipo_suelo = fila[3]
+
+    
+    if "grava" in tipo_suelo or "arena" in tipo_suelo:
+        factor_seguridad = 2.0
+    elif "limo" in tipo_suelo or "arcilla" in tipo_suelo:
+        factor_seguridad = 2.5
+    else:
+        factor_seguridad = 2.8
+    
+    esfuerzo_admisible = resistencia_kpa / factor_seguridad  # kPa = kN/m²
+    area_requerida = carga_columna / esfuerzo_admisible
+
+    if forma.lower() == "cuadrada":
+        lado = math.sqrt(area_requerida)
+        ancho = lado
+        largo = lado
+    else:
+        ancho = math.sqrt(area_requerida / relacion_lados)
+        largo = ancho * relacion_lados
+    
+    resultado = {
+        "punto_muestreo": str(punto_muestreo).upper(),
+        "tipo_suelo": tipo_suelo,
+        "profundidad_deseada_m": profundidad_deseada,
+        "resistencia_suelo_kpa": round(resistencia_kpa, 2),
+        "esfuerzo_admisible_kpa": round(esfuerzo_admisible, 2),
+        "area_requerida_m2": round(area_requerida, 2),
+        "forma": forma.lower(),
+        "relacion_lados": relacion_lados,
+        "ancho_m": round(ancho, 2),
+        "largo_m": round(largo, 2),
+        "lado_m": round(math.sqrt(area_requerida), 2) if forma.lower() == "cuadrada" else None
+    }
+    return resultado
+
+# ----------------------------
+# Programa principal con input()
+# ----------------------------
+def main():
+    carga_columna = float(input("Ingrese la carga de la columna en kN: "))
+    punto_muestreo = input("Ingrese el punto de muestreo (ej: P1, P2, ..., P7): ").strip()
+    profundidad_deseada = float(input("Ingrese la profundidad deseada en m: "))
+    forma = input("Ingrese la forma de la zapata (cuadrada o rectangular): ").strip().lower()
+    relacion_lados = 1.0
+    if forma == "rectangular":
+        relacion_lados = float(input("Ingrese la relación largo/ancho (ej: 1.5): "))
+    resultado = dimensionar_zapata(
+        carga_columna=carga_columna,
+        punto_muestreo=punto_muestreo,
+        profundidad_deseada=profundidad_deseada,
+        forma=forma,
+        relacion_lados=relacion_lados,
+        
+    )
+    print("\nRESULTADO:")
+    print(f" - Punto de muestreo: {resultado['punto_muestreo']}")
+    print(f" - Tipo de suelo: {resultado['tipo_suelo']}")
+    print(f" - Resistencia del suelo: {resultado['resistencia_suelo_kpa']} kPa")
+    print(f" - Esfuerzo admisible: {resultado['esfuerzo_admisible_kpa']} kPa")
+    print(f" - Área requerida: {resultado['area_requerida_m2']} m²")
+    if forma == "cuadrada":
+        print(f" - Lado de la zapata: {resultado['lado_m']} m")
+    else:
+        print(f" - Ancho: {resultado['ancho_m']} m")
+        print(f" - Largo: {resultado['largo_m']} m")
+
+
+main()
