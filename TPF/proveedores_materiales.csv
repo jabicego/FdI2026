@@ -1,0 +1,28 @@
+proveedor,material,precio_unitario,calidad,tiempo_entrega_dias,distancia_km,telefono,email
+Hormigones VM SA,Hormigón H25,85000,9.2,2,5.3,353-4521000,ventas@hormigonesvm.com
+Hormigones VM SA,Hormigón H30,92000,9.5,2,5.3,353-4521000,ventas@hormigonesvm.com
+Hormigones VM SA,Hormigón H35,98000,9.7,3,5.3,353-4521000,ventas@hormigonesvm.com
+Corralón San Martín,Arena,28000,8.5,1,2.1,353-4523456,info@corralonvm.com
+Corralón San Martín,Piedra 6-20,31000,8.3,1,2.1,353-4523456,info@corralonvm.com
+Corralón San Martín,Cemento CP40,580,8.8,1,2.1,353-4523456,info@corralonvm.com
+Aceros Centro SRL,Acero ADN420,1200,9.0,3,8.7,353-4567890,ventas@aceroscentro.com
+Aceros Centro SRL,Acero ADN500,1350,9.3,3,8.7,353-4567890,ventas@aceroscentro.com
+Aceros Centro SRL,Malla Sima,4500,8.7,2,8.7,353-4567890,ventas@aceroscentro.com
+Materiales del Sur,Hormigón H25,83000,8.8,3,12.4,353-4534567,contacto@matdelsur.com
+Materiales del Sur,Arena,26500,8.2,1,12.4,353-4534567,contacto@matdelsur.com
+Materiales del Sur,Cemento CP40,565,8.5,1,12.4,353-4534567,contacto@matdelsur.com
+Premoldeados Villa María,Vigas pretensadas,125000,9.8,15,6.2,353-4578901,info@premoldeadosvm.com
+Premoldeados Villa María,Losas alveolares,95000,9.6,12,6.2,353-4578901,info@premoldeadosvm.com
+Premoldeados Villa María,Columnas,78000,9.4,10,6.2,353-4578901,info@premoldeadosvm.com
+Hierros del Centro,Acero ADN420,1180,8.9,2,3.5,353-4590123,ventas@hierrosdelcentro.com
+Hierros del Centro,Acero ADN500,1320,9.1,2,3.5,353-4590123,ventas@hierrosdelcentro.com
+Hierros del Centro,Perfiles IPN,8500,9.0,4,3.5,353-4590123,ventas@hierrosdelcentro.com
+La Casa del Constructor,Hormigón H25,86000,8.9,2,4.8,353-4545678,info@casaconstructor.com
+La Casa del Constructor,Arena,27500,8.4,1,4.8,353-4545678,info@casaconstructor.com
+La Casa del Constructor,Piedra 6-20,30000,8.2,1,4.8,353-4545678,info@casaconstructor.com
+Ferretería Industrial VM,Cemento CP40,575,8.6,1,7.3,353-4556789,ventas@ferreteriaindustrial.com
+Ferretería Industrial VM,Cal hidráulica,320,8.3,1,7.3,353-4556789,ventas@ferreteriaindustrial.com
+Ferretería Industrial VM,Aditivos,2800,8.7,2,7.3,353-4556789,ventas@ferreteriaindustrial.com
+Distribuidora Córdoba,Hormigón H30,89500,9.2,4,45.2,351-4123456,ventas@distcordoba.com
+Distribuidora Córdoba,Acero ADN500,1290,9.4,5,45.2,351-4123456,ventas@distcordoba.com
+Distribuidora Córdoba,Cemento CPC40,555,9.0,3,45.2,351-4123456,ventas@distcordoba.com

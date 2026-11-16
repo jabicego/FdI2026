@@ -1,0 +1,21 @@
+nombre_calle,longitud_metros,ancho_metros,estado_actual,prioridad,barrio
+San Martin,450,7,tierra,alta,Centro
+Belgrano,380,7,ripio,media,Centro
+Rivadavia,520,6.5,tierra,alta,Sur
+Mitre,290,7,deteriorado,alta,Norte
+Urquiza,615,7.5,ripio,media,Este
+Alem,340,6,tierra,alta,Oeste
+Moreno,475,7,ripio,baja,Centro
+Saavedra,380,6.5,tierra,media,Sur
+Roca,425,7,deteriorado,alta,Norte
+Pellegrini,510,7,ripio,baja,Este
+Dorrego,365,6,tierra,media,Oeste
+Lavalle,295,7,ripio,baja,Centro
+Castelli,440,6.5,tierra,alta,Sur
+Güemes,385,7,deteriorado,media,Norte
+Brown,520,7.5,ripio,baja,Este
+Alvear,410,6,tierra,alta,Oeste
+Pueyrredón,355,7,ripio,media,Centro
+Lamadrid,475,6.5,tierra,alta,Sur
+Las Heras,390,7,deteriorado,media,Norte
+French,425,7,ripio,baja,Este
