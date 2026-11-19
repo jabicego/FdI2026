@@ -1,0 +1,9 @@
+----------- Informe de análisis de humedad -----------
+
+El promedio de los valores de Humedad para P1 es: 16.50%
+El promedio de los valores de Humedad para P2 es: 18.13%
+El promedio de los valores de Humedad para P3 es: 15.62%
+El promedio de los valores de Humedad para P4 es: 16.34%
+El promedio de los valores de Humedad para P5 es: 17.45%
+El promedio de los valores de Humedad para P6 es: 15.90%
+El promedio de los valores de Humedad para P7 es: 16.93%
